@@ -67,7 +67,7 @@ body.fade-out{
 span{
     position: absolute;
     margin-top: 150px;
-    margin-left: 15px;
+    margin-left: 25px;
     font-size: larger;
     font-weight: 80;
     letter-spacing: 1px;
@@ -141,6 +141,7 @@ span{
     color: var(--clr);
     margin-top: 80px;
     cursor: pointer;
+    margin-right: 10px;
 }
 .Container ul li.active a .icon{
     transform: translateY(-35px);
