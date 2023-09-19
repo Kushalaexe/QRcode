@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Domine&display=swap');
+
+:root{
+    --clr:#222327;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: var(--clr);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.Text{
+    display: block;
+    text-align: center;
+    font-size: x-large;
+    font-family: 'black Ops One',cursive;
+    letter-spacing: 0.1em;
+}
+button{
+    width: 50%;
+    height: 50px;
+    cursor: pointer;
+    font-size:x-large;
+    border-radius: 20px;
+    outline:none;
+    border:none;
+    font-family: 'black ops one',cursive;
+    letter-spacing: 1px;
+    color:var(--clr);
+    background: rgba(11, 168, 230, 0.89);
+    transition: all 0.1s;
+    margin-top: 70px;
+    text-decoration: none;
+}
+button:active{
+    transform: scale(0.98);
+}
+button span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+button span::after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    top: 0;
+    right: -20px;
+    
+}
+
+button:hover span{
+    padding-right: 25px;
+}
+button:hover span::after{
+    opacity: 1;
+    right: 0;
+    
+}

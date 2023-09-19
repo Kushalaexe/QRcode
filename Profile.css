@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Domine&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #222327;
+    /* background-color: #222327; */
+    font-family: 'Black Ops One', cursive;
+    margin-top: -36px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.form{
+    margin-top: 99px;
+    position:relative;
+    height: 450px;
+    width: 400px;
+    background: linear-gradient(rgb(65, 75, 209),rgb(39, 223, 122));
+    border-radius: 20px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+   /* display: flex;
+   justify-content: center; */
+}
+.pic{
+    top: 1%;
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    background: url(Me.jpg);
+    background-size:cover;
+    border-radius: 50%;
+    border: 10px solid #222327;
+}
+.pic::before{
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    left: -43px;
+    top: 38px;
+    border-top-right-radius: 65px;
+    box-shadow: 8px -13px 0px 0px #222327;
+}
+.pic::after{
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    right: -45px;
+    top: 43px;
+    border-top-left-radius: 22px;
+    box-shadow: -8px -9px 0px 0px #222327;
+}
+span{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 15px;
+    font-size: larger;
+    font-weight: 80;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+    color: #fcd7d7;
+    font-family: 'Black Ops One', cursive;;
+}
+
+.insta{
+    position:absolute;
+    margin-top: 226px;
+    margin-left: 160px;
+    font-size:25px;
+}
+
+
+
+:root{
+    --clr:#222327;
+}
+
+/* body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+min-height: 100vh;
+background: var(--clr);
+font-family: 'Black Ops One', cursive;
+} */
+.menu{
+    margin-top:1px ;
+    display: inline-block;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.Container{
+    /* margin-top: 90px; */
+    position: relative;
+    height: 75px;
+    width: 360px;
+    background: #fff;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    border-radius: 15px;
+    left: 1px;
+}
+.Container ul{
+    width: 350px;
+    display: flex;
+}
+.Container ul li{
+    position: relative;
+    list-style: none;
+    width: 163px;
+    height: 60px;
+    /* To make transparent */
+    z-index: 1;
+}
+.Container ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* To make column */
+    flex-direction: column; 
+    width: 100%;
+    font-weight: 550;
+}
+.Container ul li a .icon{
+    position: absolute;
+    display: block;
+    line-height: 99px;
+    font-size: 2.0em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--clr);
+    margin-top: 80px;
+    cursor: pointer;
+}
+.Container ul li.active a .icon{
+    transform: translateY(-35px);
+}
+.Container ul li a .text{
+    position: absolute;
+    color: var(--clr);
+    font-size: 0.9em;
+    transition: 0.1s;
+    letter-spacing: 0.2em;
+    font-weight:400;
+    opacity: 0;
+    transform: translateY(20px);
+
+}
+.Container ul li.active a .text{
+    opacity: 1;
+    /* To letter popup from hiding */
+    transform: translateY(40px);
+    transition: 0.5s;
+    margin-top: 15px;
+}
+.indicator{
+    position:absolute;
+    top: -50%;
+    height: 70px;
+    width: 70px;
+    background: #00ff80;
+    border-radius: 50%;
+    left: 15%;
+    border:6px solid rgb(39, 223, 122);
+    transition: 0.4s;
+}
+.indicator::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 22px;
+    top: 55%;
+    background: transparent;
+    left: -39%;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 rgb(39, 223, 122);
+}
+.indicator::after{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 22px;
+    top: 55%;
+    background: transparent;
+    right: -39%;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 rgb(39, 223, 122);
+}
+.Container ul:nth-child(2) li.active~.indicator {
+	transform: translatex(calc(179px * 1));
+    background: #0080ff;
+   
+}
+.Container ul:nth-child(1) li.active~.indicator {
+	transform: translateX(calc(170px * 0));
+    background: #00ff80;
+}
+
+
+
