@@ -17,8 +17,12 @@ body{
     margin-top: -36px;
     opacity: 0;
     transition: opacity 0.5s;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
-
+body.fade-out{
+    opacity: 0;
+}
 .form{
     margin-top: 99px;
     position:relative;
@@ -27,8 +31,6 @@ body{
     background: linear-gradient(rgb(65, 75, 209),rgb(39, 223, 122));
     border-radius: 20px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-   /* display: flex;
-   justify-content: center; */
 }
 .pic{
     top: 1%;
@@ -80,7 +82,7 @@ span{
     position:absolute;
     margin-top: 226px;
     margin-left: 160px;
-    font-size:25px;
+    font-size:35px;
 }
 
 
@@ -89,15 +91,6 @@ span{
     --clr:#222327;
 }
 
-/* body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-min-height: 100vh;
-background: var(--clr);
-font-family: 'Black Ops One', cursive;
-} */
 .menu{
     margin-top:1px ;
     display: inline-block;

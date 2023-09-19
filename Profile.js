@@ -8,13 +8,16 @@ list.forEach((item)=>
 item.addEventListener('click',activeLink));
 
 
-window.toTransitionPage = function(href) {
-    document.querySelector('body').style.opacity = 0
-    setTimeout(function() { 
-        window.location.href = href
-    }, 500)
-}
-
-document.addEventListener('DOMContentLoaded', function(event) {
-    document.querySelector('body').style.opacity = 1
-})
+document.addEventListener("DOMContentLoaded", function () {
+    const Links = document.querySelectorAll(".link");
+    Links.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetPage = event.currentTarget.getAttribute("href");
+            document.body.classList.add("fade-out");
+            setTimeout(function () {
+                window.location.href = targetPage;
+            }, 500); 
+        });
+    });
+});
